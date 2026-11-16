@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy 22nd Birthday, My Love</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&family=Playfair+Display:wght@500;700&display=swap">
+<style>
+:root{
+  --wine:#3b0a12; --oxblood:#6b1220; --crimson:#8e1a2b; --gold:#c9a24b; --gold-soft:#e3c77f;
+  --paper:#f3e6c9; --paper-edge:#e6d3a8; --ink:#33171a;
+  --serif:"Cormorant Garamond","Georgia",serif; --display:"Playfair Display","Georgia",serif; --script:"Pinyon Script","Snell Roundhand",cursive;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:radial-gradient(ellipse at 50% 0%,var(--crimson) 0%,var(--oxblood) 40%,var(--wine) 100%) fixed;color:var(--ink);font-family:var(--serif);min-height:100vh}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.07;background-image:repeating-linear-gradient(45deg,#fff 0 1px,transparent 1px 14px),repeating-linear-gradient(-45deg,#fff 0 1px,transparent 1px 14px)}
+
+/* Cover */
+#cover{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem}
+.num{font-family:var(--display);font-weight:700;font-size:clamp(8rem,34vw,15rem);line-height:.9;margin:0;background:linear-gradient(180deg,#f0d98f 0%,#c9a24b 45%,#8a6a22 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(0 6px 14px rgba(0,0,0,.45))}
+#cover p{text-align:center}
+.hb{font-family:var(--script);font-size:clamp(2.3rem,9vw,3.8rem);color:var(--paper);margin:1.8rem 0 0;line-height:1.1}
+.who{font-family:var(--display);letter-spacing:.35em;color:var(--gold);font-size:.95rem;margin:1.6rem 0 0}
+.rule{width:1px;height:70px;background:linear-gradient(var(--gold),transparent);margin-top:2.6rem}
+.below{font-style:italic;color:var(--paper-edge);margin:2.4rem 0 0;font-size:1.1rem}
+#hearts{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:5}
+.heart{position:absolute;bottom:-40px;opacity:0;animation:rise linear forwards;will-change:transform}
+@keyframes rise{0%{transform:translate3d(0,0,0) scale(.8);opacity:0}10%{opacity:.55}90%{opacity:.4}100%{transform:translate3d(var(--dx),-115vh,0) scale(1.1);opacity:0}}
+@media (prefers-reduced-motion:reduce){#hearts{display:none}}
+.frame{position:absolute;inset:14px;border:1px solid var(--gold);outline:1px solid var(--gold);outline-offset:6px;opacity:.7;pointer-events:none}
+#cover .to{font-family:var(--script);font-size:clamp(2.4rem,9vw,4rem);color:var(--gold-soft);margin:0}
+#cover .sub{font-style:italic;color:var(--paper-edge);font-size:1.2rem;margin:0;letter-spacing:.04em}
+.seal{width:132px;height:132px;border-radius:50%;border:0;cursor:pointer;position:relative;
+  background:radial-gradient(circle at 35% 30%,#c62a3f,#8e1a2b 55%,#5a0d18);
+  box-shadow:0 10px 30px rgba(0,0,0,.55),inset 0 -6px 12px rgba(0,0,0,.35),inset 0 4px 8px rgba(255,255,255,.2);
+  font-family:var(--script);font-size:3.6rem;color:var(--gold-soft);text-shadow:0 2px 3px rgba(0,0,0,.5);animation:beat 2.6s ease-in-out infinite}
+.seal::after{content:"";position:absolute;inset:10px;border-radius:50%;border:1.5px dashed rgba(227,199,127,.7)}
+.seal:focus-visible{outline:3px solid var(--gold-soft);outline-offset:6px}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.hint{color:var(--gold);font-style:italic;margin:0}
+
+/* Letter */
+main{max-width:720px;margin:0 auto;padding:3rem 1rem 4rem}
+.sheet{position:relative;background:linear-gradient(180deg,var(--paper),var(--paper-edge));padding:clamp(2.2rem,7vw,4.5rem) clamp(1.4rem,6vw,4rem);
+  box-shadow:0 30px 70px rgba(0,0,0,.55),inset 0 0 60px rgba(120,70,20,.25);border-radius:3px;
+  opacity:0;transform:translateY(40px);transition:opacity 1.4s ease .6s,transform 1.4s ease .6s}
+body.read .sheet{opacity:1;transform:none}
+.sheet::before{content:"";position:absolute;inset:12px;border:1px solid var(--crimson);outline:1px solid var(--gold);outline-offset:4px;pointer-events:none}
+h1{font-family:var(--display);font-weight:700;color:var(--oxblood);text-align:center;font-size:clamp(1.7rem,6.4vw,2.8rem);line-height:1.2;margin:0 0 .6rem}
+.orn{text-align:center;color:var(--crimson);letter-spacing:.8em;margin:1.2rem 0 2rem;font-size:1.1rem}
+p{font-size:clamp(1.14rem,3.8vw,1.3rem);line-height:1.75;margin:0 0 1.4rem;text-align:left;hyphens:auto}
+.sheet>p:first-of-type::first-letter{font-family:var(--display);font-size:3.6em;float:left;line-height:.85;padding:.08em .1em 0 0;color:var(--crimson)}
+.pull{font-style:italic;text-align:center;color:var(--oxblood);font-size:clamp(1.3rem,4.6vw,1.6rem);margin:2rem 0}
+.sign{text-align:right;margin-top:2.4rem}
+.sign .fy{font-style:italic;font-size:1.2rem;margin:0}
+.sign .name{font-family:var(--script);font-size:clamp(2.6rem,9vw,3.6rem);color:var(--crimson);line-height:1.1;margin:.2rem 0 0}
+.name-big{font-family:var(--display);color:var(--oxblood);font-weight:700;letter-spacing:.06em}
+footer{text-align:center;color:var(--gold-soft);font-family:var(--script);font-size:1.8rem;margin-top:2.5rem}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important}}
+
+.disc-wrap{position:relative;width:clamp(230px,72vw,330px);aspect-ratio:1;margin:0 0 1.6rem}
+.disc{display:block;width:100%;height:100%;border:0;padding:0;border-radius:50%;cursor:pointer;position:relative;
+  background:repeating-radial-gradient(circle at center,#12040700 0 0,#140508 0 2px,#260b10 2px 4px);
+  box-shadow:0 18px 40px rgba(0,0,0,.6),0 0 0 6px #1a0609,0 0 0 7px var(--gold);animation:spin 5s linear infinite;animation-play-state:paused}
+.disc.playing{animation-play-state:running}
+.disc::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,transparent 0 18%,rgba(255,255,255,.16) 25%,transparent 32% 68%,rgba(255,255,255,.16) 75%,transparent 82%)}
+.disc:focus-visible{outline:3px solid var(--gold-soft);outline-offset:10px}
+.label{position:absolute;inset:32%;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 35% 30%,#c62a3f,#8e1a2b 60%,#5a0d18);border:2px solid var(--gold);box-shadow:inset 0 0 12px rgba(0,0,0,.5);
+  font-family:var(--display);font-weight:700;font-size:clamp(2rem,10vw,3.2rem);color:var(--gold-soft)}
+.label::after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:#140508;bottom:50%;transform:translateY(-1.9em)}
+.arm{position:absolute;top:3%;right:-5%;width:58%;height:7px;border-radius:4px;background:linear-gradient(var(--gold-soft),var(--gold));transform-origin:right center;transform:rotate(14deg);transition:transform 1s ease;box-shadow:0 3px 6px rgba(0,0,0,.5);pointer-events:none}
+.arm::before{content:"";position:absolute;left:-4px;top:-3px;width:16px;height:13px;border-radius:2px;background:var(--gold)}
+.arm::after{content:"";position:absolute;right:-12px;top:-9px;width:24px;height:24px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#c62a3f,#5a0d18);border:2px solid var(--gold)}
+.disc-wrap.on .arm{transform:rotate(-24deg)}
+.tap{font-style:italic;color:var(--gold-soft);margin:0;font-size:1.15rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.disc{animation:none!important}}
+.label{inset:20%;border-width:3px;background:url(record.jpg) center/cover no-repeat,#5a0d18}
+.label::after{display:none}
+@media (prefers-reduced-motion:reduce){.label{animation:none!important}}
+</style>
+</head>
+<body>
+
+<section id="cover" aria-label="Birthday">
+  <div class="frame"></div>
+  <div class="disc-wrap" id="wrap"><button class="disc" id="disc" aria-label="Play our song"><span class="label" role="img" aria-label="Zhanvermeer"></span></button><div class="arm" aria-hidden="true"></div></div>
+  <p class="tap" id="tap">Tap the record to play</p>
+  <audio id="song" loop preload="auto" src="song.mp3"></audio>
+  <p class="hb">Happy Birthday, my love</p>
+  <p class="who">ZHANVERMEER</p>
+  <p class="below">a letter for you, below</p>
+</section>
+
+<main>
+  <article class="sheet">
+    <h1>Happy 22nd Birthday, My Love!</h1>
+    <div class="orn" aria-hidden="true">❦ ❦ ❦</div>
+
+    <p>Today the world celebrates the day you were born, and I couldn’t be more grateful that it did. Twenty-two years ago, the universe made someone so sweet, so gentle, so soft-spoken, and so caring, and somehow, out of everyone in this whole big world, I got to be the one who feels your love. Hanggang ngayon, minsan napapatingin na lang ako sa’yo and I think, “Ang swerte ko.” Parang hindi pa rin ako makapaniwala na ikaw ung kasama ko, na ikaw ung uuwian ko, na ikaw ung nagmamahal sa akin nang ganito. 🥺</p>
+
+    <p>You make my world softer just by being in it. The way you smile, the way you listen, the way you make even the most ordinary days feel like something I want to keep forever. Kahit simpleng kwentuhan lang, kahit tahimik lang tayo, kahit walang ginagawa, basta ikaw, parang ang gaan ng lahat. Whenever we spend time together, I feel safe, I feel at home, and I feel loved in ways I never knew I needed. You are the calm after my chaos, my favorite hello, and my hardest goodbye. And of course, you’re so so so duper cutie handsomeeee so pogi pa huhu, which I will never get tired of telling you. Every time I look at you, I fall a little more, and somehow it still surprises me. 😝❤️</p>
+
+    <p>I love the little things about you, babi. The way your voice is so soft but deep (hehe). The way you care without making a big deal out of it. The way you notice things about me that I didn’t even know I was showing. The way you make me feel like I’m enough, even on the days I don’t feel like it. I love how gentle your heart is, how thoughtful you are, and how you love quietly but so deeply. Hindi mo kailangang maging maingay para maramdaman ko ung pagmamahal mo.</p>
+
+    <div class="orn" aria-hidden="true">❦</div>
+
+    <p>As you step further into adulthood, I hope life is gentler to you. I know how much you carry, how much you try to hold together, and how hard you are on yourself sometimes. Please don’t pressure yourself, my love. You don’t have to have everything figured out, and you don’t have to be perfect to be worthy of good things. Whatever you did, whatever you’re doing, and whatever you will do, I’m proud of you. Always, and in every version of you. Proud ako sayo kahit pagod ka, kahit nagdududa ka, kahit pakiramdam mo kulang ka pa. Because from where I stand, you are already so much. I want you to be as kind to yourself as you are to everyone around you, because you deserve that kindness too. I hope this year gives you peace, rest, laughter, and all the little things that make your heart full.</p>
+
+    <p>I hope this year brings you closer to your dreams. I hope the doors you’ve been knocking on finally open, that the effort you’ve poured in finally pays off, and that you get to see just how far you’ve come. Tandaan mo, hindi kailangan madaliin. Bloom at your own pace, my love. The world will wait for you, and so will I.</p>
+
+    <p>I want you to know that I’m not going anywhere. I’ll be here till the end, watching you grow, bloom, and become everything you’re meant to be, cheering for you louder than anyone else. Whether you need someone to stay up with you late at night, someone to call when everything feels too heavy, or someone to simply sit beside you in silence, I’m here. When you win, I’ll celebrate with you. When you fall, I’ll sit with you on the floor until you’re ready to stand again. You will never have to face anything alone, not while I’m still breathing. 🤍</p>
+
+    <div class="orn" aria-hidden="true">❦</div>
+
+    <p>I’m also sorry. I’m sorry for the times I wasn’t as gentle as you needed me to be. For the times na inaaway kita, for the times na wala ako sa mood, and for the times na makulit ako at hindi nakikinig. You deserve patience and softness, and I’m still learning how to give you more of both every day. Thank you for staying, for understanding me even when I’m difficult, and for choosing me again and again. Hindi mo alam kung gaano ako nagpapasalamat na hindi ka sumuko sa akin. I promise to keep trying, to keep growing with you, and to love you better with every year that passes.</p>
+
+    <p>I can’t wait for everything still ahead of us, babi. The trips we haven’t taken, the dates we haven’t planned, the inside jokes we haven’t made yet, the late-night food runs, the lazy mornings, the random jokes, the silly arguments over nothing, and all the ordinary days that will become our favorite memories. I want to build a life with you, one soft moment at a time. I want to be the person you tell everything to, the person you laugh with the hardest, the person you come home to. Wherever life takes us, I just want you beside me.</p>
+
+    <p>If I could give you anything today, I’d give you the whole world, but since I can’t, I’m giving you my heart, my time, my loyalty, and my love, all of it, all yours. Always yours.</p>
+
+    <p class="pull">So make a wish today, my love, and know that I’ll spend this whole year helping it come true. 🕯️</p>
+
+    <p>Happy birthday, my love, my favorite person, my home, my pretty boy, my handsome man, <span class="name-big">MY ZHANVERMEER</span>. 🥺💋❤️<br>Thank you for being you. Thank you for being born, for being mine, and for loving me the way you do. I love you more than words can ever say, today and every day after. 🤍</p>
+
+    <div class="sign">
+      <p class="fy">Forever yours, your wife,</p>
+      <p class="name">Nicole ❤️</p>
+    </div>
+  </article>
+  <footer aria-hidden="true">with all my love</footer>
+</main>
+
+<script>
+(function(){
+  var sheet=document.querySelector('.sheet');
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(e,o){if(e[0].isIntersecting){document.body.classList.add('read');o.disconnect()}},{threshold:.05}).observe(sheet);
+  }else{document.body.classList.add('read')}
+})();
+</script>
+<script>
+(function(){
+  var a=document.getElementById('song'),d=document.getElementById('disc'),w=document.getElementById('wrap'),t=document.getElementById('tap');
+  function set(on){d.classList.toggle('playing',on);w.classList.toggle('on',on);t.textContent=on?'Now playing, tap to pause':'Tap the record to play';d.setAttribute('aria-label',on?'Pause our song':'Play our song')}
+  d.addEventListener('click',function(){
+    if(a.paused){var p=a.play();if(p&&p.then){p.then(function(){set(true)}).catch(function(){set(false)})}else{set(true)}}
+    else{a.pause();set(false)}
+  });
+})();
+</script>
+<script>
+(function(){
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  var box=document.createElement('div');box.id='hearts';box.setAttribute('aria-hidden','true');document.body.appendChild(box);
+  var cols=['#c62a3f','#e8647a','#e3c77f','#f3e6c9','#ff8fa3'];
+  function make(){
+    var h=document.createElement('span');h.className='heart';h.textContent='♥';
+    h.style.cssText='left:'+(Math.random()*100)+'%;font-size:'+(10+Math.random()*18)+'px;color:'+cols[Math.floor(Math.random()*cols.length)]+';animation-duration:'+(9+Math.random()*8)+'s;--dx:'+(Math.random()*80-40)+'px';
+    box.appendChild(h);
+    h.addEventListener('animationend',function(){h.remove()});
+  }
+  for(var i=0;i<6;i++)setTimeout(make,i*300);
+  setInterval(make,900);
+})();
+</script>
+</body>
+</html>
